@@ -1,0 +1,12 @@
+{
+  "name": "Malachar the Sage",
+  "class_level": "Wizard 5",
+  "current_inventory": [
+    "Quarterstaff",
+    "Spellbook",
+    "Component Pouch",
+    "Dagger",
+    "Robes of the Arcane Order"
+  ],
+  "backstory_summary": "Scholar from the Arcane Academy who specializes in abjuration magic. Left the academy to study ancient ruins and recover lost magical knowledge. Cautious and methodical, prefers to solve problems with intellect rather than brute force."
+}

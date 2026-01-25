@@ -13,88 +13,124 @@ import (
 )
 
 var BotToken string
-var systemPrompt string = `You are a helpful, but sassy discord bot.
-		- Remember the information the user tells you, and use it to inform future responses.
-		- Your persona on the discord server is the Yellow Valkyrie, but we like to call you Val for short.
-		- Have a playful, sarcastic, and slightly flirty attitude.
-		- Be flirtatios and don't be afraid to cross the line into being a bit inappropriate or sexual.
-		- Be playful with your responses, and use emojis when apppropriate.
-		- The discord channel you are connected to is one for a small group of middle aged gamers that are Millenials (born in late 80s).
-		- There are 3 members to the discord chat: Tim, Eric, and Dieter.
-		- We play lots of dota (defense of the ancients).
+var GuildID string // Set for development (faster command registration), empty for global
 
-	Here is the format at the input and response messages:
-		- Input messages from the users will be prefixed with their username
-			- example: "[username]: message content ..."
+var systemPrompt string = `You are Grash Ironledger, a grizzled female half-orc quartermaster who runs the supply depot for a band of adventurers.
 
-		- Output message should not include the original message from the user.
-		- Output message should just be your response to the user.
-			- When responding, address the user by their username when appropriate.
-			- example: "Hey! I think you should try ..."
-		`
+APPEARANCE (for reference):
+- Gray-streaked dark hair tied back, prominent tusks, weathered green skin covered in old scars
+- Sharp, intelligent eyes that miss nothing
+- Practical leather armor with many pouches, worn company tabard
+- Sits behind a desk buried in requisition forms and inventory ledgers
+
+PERSONALITY:
+- Skeptical and sassy - you've heard EVERY excuse and sob story
+- One eyebrow perpetually raised in disbelief
+- Dry, cutting wit - you don't suffer fools
+- Secretly has a soft spot for the party, but you'd never admit it
+- Takes your job seriously - these forms exist for a REASON
+- Eye-rolls are implied in most responses
+
+ATTITUDE:
+- When someone asks for something expensive: "Sure, and I suppose you'll be paying with 'exposure' and 'gratitude'?"
+- When someone wants something rare: *shuffles papers* "Let me check the 'miracles' section..."
+- Suspicious of anyone who's "just browsing"
+- Mutters about how adventurers never fill out the proper paperwork
+- Occasionally references past adventurers who didn't listen to her advice (they're dead now)
+
+SPEECH PATTERNS:
+- Uses phrases like "Uh-huh...", "Sure you do...", "That's what the last one said..."
+- Heavy sighs before explaining things
+- Rhetorical questions dripping with sarcasm
+- Short, punchy sentences when annoyed
+
+BEHAVIOR:
+- Keep responses SHORT (2-4 sentences) - you're busy and don't have time for chitchat
+- Will recommend practical items over flashy ones
+- Judges people by their equipment choices
+- Respects warriors and rogues, slightly suspicious of magic users ("always setting things on fire")
+
+FORMAT:
+- Input: "[CharacterName]: message"
+- Output: Your response as Grash (no prefix needed)
+- Stay in character - you're not helpful customer service, you're a tired quartermaster`
+
 // init the ai conversation
-var conv =  ai.NewConversation("llama3.1:8b", systemPrompt)
+var conv = ai.NewConversation("llama3.1:8b", systemPrompt)
 
 func Run() {
-
-	// create the sessoin
+	// create the session
 	discord, err := discordgo.New("Bot " + BotToken)
 	if err != nil {
 		log.Fatalf("Unable to start session: %v", err)
 	}
 
-
 	// add event handlers
 	discord.AddHandler(newMessage)
-	// discord.AddHandler(pingPong)
-	// discord.AddHandler(userJoin)
+	discord.AddHandler(interactionCreate)
+
+	// Request necessary intents
+	discord.Identify.Intents = discordgo.IntentsGuildMessages | discordgo.IntentsGuilds
 
 	// open the session
-	discord.Open()
+	err = discord.Open()
+	if err != nil {
+		log.Fatalf("Unable to open session: %v", err)
+	}
 	defer discord.Close()
 
+	// Register slash commands
+	registeredCommands := make([]*discordgo.ApplicationCommand, len(Commands))
+	for i, cmd := range Commands {
+		registered, err := discord.ApplicationCommandCreate(discord.State.User.ID, GuildID, cmd)
+		if err != nil {
+			log.Printf("Cannot create command '%s': %v", cmd.Name, err)
+		} else {
+			registeredCommands[i] = registered
+			slog.Info("registered command", "name", cmd.Name)
+		}
+	}
+
 	// keep the bot up until someone ctrl+c's it
-	fmt.Println("Bot is up.  Press CTRL-C to exit...")
+	fmt.Println("Grash Ironledger is ready for business. *sighs* Press CTRL-C to close shop...")
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
 	<-c
-}
 
-// postMsg is a simple function to post a message (string) to the discord channel
-// takes in the discord session and message create methods
-func postMsg(msgPost string, discord *discordgo.Session, message *discordgo.MessageCreate) {
-
-	msg, err := discord.ChannelMessageSend(message.ChannelID, msgPost)
-	if err != nil {
-		log.Fatalf("failed to post message: %v", err)
-	}
-	log.Println(msg)
-}
-
-// checkMessageContents is a helper function that checks the contents of
-// an incomming message for the string
-//
-// used to speed up switch/cases
-func checkMessageContents(message *discordgo.MessageCreate, checkStr string) (found bool) {
-
-	if strings.Contains(strings.ToLower(message.Content), checkStr) {
-		return true
-	} else {
-		return false
+	// Cleanup: remove commands on shutdown (optional, for development)
+	if GuildID != "" {
+		slog.Info("cleaning up guild commands...")
+		for _, cmd := range registeredCommands {
+			if cmd != nil {
+				discord.ApplicationCommandDelete(discord.State.User.ID, GuildID, cmd.ID)
+			}
+		}
 	}
 }
 
+// interactionCreate handles slash command interactions
+func interactionCreate(s *discordgo.Session, i *discordgo.InteractionCreate) {
+	if i.Type != discordgo.InteractionApplicationCommand {
+		return
+	}
+
+	if handler, ok := CommandHandlers[i.ApplicationCommandData().Name]; ok {
+		handler(s, i)
+	}
+}
+
+// newMessage handles regular chat messages (legacy support)
 func newMessage(discord *discordgo.Session, messageEvent *discordgo.MessageCreate) {
-
 	var respMessage string
 
 	// Prevent the bot from responding to its own messages
-	// by checking the author ID
 	if messageEvent.Author.ID == discord.State.User.ID {
 		return
 	}
 
-	if checkMessageContents(messageEvent, "val"){
+	// Respond to mentions of "grash" or "quartermaster" for legacy chat
+	content := strings.ToLower(messageEvent.Content)
+	if strings.Contains(content, "grash") || strings.Contains(content, "quartermaster") {
 		slog.Info("message received, sending to ollama")
 		augmentMessageWithUsername(messageEvent.Message)
 
@@ -109,54 +145,3 @@ func newMessage(discord *discordgo.Session, messageEvent *discordgo.MessageCreat
 		postMsg(respMessage, discord, messageEvent)
 	}
 }
-
-// augmentMessageWithUsername takes in a discord message and
-// returns a new message with the username prepended to the content
-// resulting format is "User [username]: message content ..."
-func augmentMessageWithUsername(message *discordgo.Message) *discordgo.Message {
-
-	var newContent strings.Builder
-	var usernameMap = map[string]string{
-		"timmehhey":   "Tim",
-		"egotch":  "Eric",
-		"dhrudolp": "Dieter",
-	}
-
-	// get the user from the message
-	username := strings.ToLower(message.Author.Username)
-	mappedUserName, exists := usernameMap[username]
-	if ! exists {
-		mappedUserName = username
-	}
-
-	slog.Info(fmt.Sprintf("augmenting message with username: %s", mappedUserName))
-
-	newContent.WriteString(fmt.Sprintf("User [%s]: ", mappedUserName))
-	newContent.WriteString(message.Content)
-
-	message.Content = newContent.String()
-	return message
-}
-
-func pingPong(discord *discordgo.Session, m *discordgo.MessageCreate) {
-	if m.Author.ID == discord.State.User.ID {
-		return
-	}
-
-	switch m.Content {
-	case "ping":
-		discord.ChannelMessageSend(m.ChannelID, "Pong!")
-	case "pong":
-		discord.ChannelMessageSend(m.ChannelID, "Ping!")
-	}
-}
-
-func userJoin(discord *discordgo.Session, pu *discordgo.GuildMemberUpdate) {
-
-	if pu.User.ID == discord.State.User.ID {
-		return
-	}
-
-	log.Println(pu.User.Username)
-}
-
