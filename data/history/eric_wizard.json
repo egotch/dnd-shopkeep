@@ -1,4 +1,11 @@
 {
   "character": "eric_wizard",
-  "purchases": []
+  "purchases": [
+    {
+      "date": "2026-01-25",
+      "item": "Potion of Healing",
+      "price": 50,
+      "session": "Between sessions"
+    }
+  ]
 }

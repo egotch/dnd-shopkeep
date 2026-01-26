@@ -79,6 +79,15 @@ func Run() {
 	}
 	defer discord.Close()
 
+	// Clean up any stale global commands (from before GuildID was set)
+	if GuildID != "" {
+		globalCmds, _ := discord.ApplicationCommands(discord.State.User.ID, "")
+		for _, cmd := range globalCmds {
+			slog.Info("removing stale global command", "name", cmd.Name)
+			discord.ApplicationCommandDelete(discord.State.User.ID, "", cmd.ID)
+		}
+	}
+
 	// Register slash commands
 	registeredCommands := make([]*discordgo.ApplicationCommand, len(Commands))
 	for i, cmd := range Commands {
@@ -122,6 +131,8 @@ func interactionCreate(s *discordgo.Session, i *discordgo.InteractionCreate) {
 // newMessage handles regular chat messages (legacy support)
 func newMessage(discord *discordgo.Session, messageEvent *discordgo.MessageCreate) {
 	var respMessage string
+
+	slog.Info("message received, scanning content")
 
 	// Prevent the bot from responding to its own messages
 	if messageEvent.Author.ID == discord.State.User.ID {

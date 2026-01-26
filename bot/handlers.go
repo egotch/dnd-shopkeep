@@ -4,10 +4,23 @@ import (
 	"fmt"
 	"log/slog"
 	"strings"
+	"time"
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/egotch/dnd-shopkeep/shop"
 )
+
+// getUsername extracts the username from an interaction, handling both
+// guild (Member) and DM (User) contexts
+func getUsername(i *discordgo.InteractionCreate) string {
+	if i.Member != nil && i.Member.User != nil {
+		return i.Member.User.Username
+	}
+	if i.User != nil {
+		return i.User.Username
+	}
+	return "unknown"
+}
 
 // handleShop processes the /shop command
 func handleShop(s *discordgo.Session, i *discordgo.InteractionCreate) {
@@ -17,11 +30,17 @@ func handleShop(s *discordgo.Session, i *discordgo.InteractionCreate) {
 		category = options[0].StringValue()
 	}
 
-	slog.Info("shop command received", "category", category, "user", i.Member.User.Username)
+	slog.Info("shop command received", "category", category, "user", getUsername(i))
+
+	// Defer response immediately - Ollama calls can be slow
+	if err := deferResponse(s, i); err != nil {
+		slog.Error("failed to defer response", "error", err)
+		return
+	}
 
 	catalog, err := shop.LoadCatalog()
 	if err != nil {
-		respondWithError(s, i, "Failed to load catalog: "+err.Error())
+		editDeferredResponse(s, i, "Error: Failed to load catalog: "+err.Error())
 		return
 	}
 
@@ -42,12 +61,12 @@ func handleShop(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	}
 
 	if len(items) == 0 {
-		respondWithMessage(s, i, fmt.Sprintf("No items found in category: %s", category))
+		editDeferredResponse(s, i, fmt.Sprintf("No items found in category: %s", category))
 		return
 	}
 
 	// Get character context for personalized recommendations
-	charFile, _ := shop.GetCharacterForUser(i.Member.User.Username)
+	charFile, _ := shop.GetCharacterForUser(getUsername(i))
 	char, _ := shop.LoadCharacter(charFile)
 
 	// Build response with AI flavor if available
@@ -56,7 +75,10 @@ func handleShop(s *discordgo.Session, i *discordgo.InteractionCreate) {
 		// Send to Ollama for quartermaster flavor
 		prompt := fmt.Sprintf("[%s]: Show me %s items", char.Name, category)
 		conv.AddMessage("user", prompt)
+		slog.Info("sending to ollama", "prompt", prompt)
+		start := time.Now()
 		aiResponse, err := conv.SendToOllama()
+		slog.Info("ollama response received", "duration", time.Since(start), "error", err)
 		if err == nil {
 			response = aiResponse + "\n\n"
 		}
@@ -64,7 +86,8 @@ func handleShop(s *discordgo.Session, i *discordgo.InteractionCreate) {
 
 	response += fmt.Sprintf("**%s**\n\n%s", title, shop.FormatItemList(items))
 
-	respondWithMessage(s, i, response)
+	slog.Info("sending shop response", "category", category, "item_count", len(items))
+	editDeferredResponse(s, i, response)
 }
 
 // handleBuy processes the /buy command
@@ -82,31 +105,37 @@ func handleBuy(s *discordgo.Session, i *discordgo.InteractionCreate) {
 		}
 	}
 
-	slog.Info("buy command received", "item", itemName, "quantity", quantity, "user", i.Member.User.Username)
+	slog.Info("buy command received", "item", itemName, "quantity", quantity, "user", getUsername(i))
+
+	// Defer response immediately - Ollama calls can be slow
+	if err := deferResponse(s, i); err != nil {
+		slog.Error("failed to defer response", "error", err)
+		return
+	}
 
 	// Get character for this user
-	charFile, err := shop.GetCharacterForUser(i.Member.User.Username)
+	charFile, err := shop.GetCharacterForUser(getUsername(i))
 	if err != nil {
-		respondWithError(s, i, "You don't have a character registered. Contact the GM.")
+		editDeferredResponse(s, i, "Error: You don't have a character registered. Contact the GM.")
 		return
 	}
 
 	char, err := shop.LoadCharacter(charFile)
 	if err != nil {
-		respondWithError(s, i, "Failed to load character: "+err.Error())
+		editDeferredResponse(s, i, "Error: Failed to load character: "+err.Error())
 		return
 	}
 
 	// Find the item in catalog
 	catalog, err := shop.LoadCatalog()
 	if err != nil {
-		respondWithError(s, i, "Failed to load catalog: "+err.Error())
+		editDeferredResponse(s, i, "Error: Failed to load catalog: "+err.Error())
 		return
 	}
 
 	item, err := catalog.FindItem(itemName)
 	if err != nil {
-		respondWithError(s, i, fmt.Sprintf("Item '%s' not found. Try /shop to see available items.", itemName))
+		editDeferredResponse(s, i, fmt.Sprintf("Error: Item '%s' not found. Try /shop to see available items.", itemName))
 		return
 	}
 
@@ -114,7 +143,7 @@ func handleBuy(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	totalCost := item.Price * quantity
 	for j := 0; j < quantity; j++ {
 		if err := shop.AppendPurchase(charFile, *item, "Between sessions"); err != nil {
-			respondWithError(s, i, "Failed to record purchase: "+err.Error())
+			editDeferredResponse(s, i, "Error: Failed to record purchase: "+err.Error())
 			return
 		}
 	}
@@ -122,7 +151,10 @@ func handleBuy(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	// Generate AI response for flavor
 	prompt := fmt.Sprintf("[%s]: I want to buy %d %s", char.Name, quantity, item.Name)
 	conv.AddMessage("user", prompt)
+	slog.Info("sending to ollama", "prompt", prompt)
+	start := time.Now()
 	aiResponse, err := conv.SendToOllama()
+	slog.Info("ollama response received", "duration", time.Since(start), "error", err)
 
 	var response string
 	if err == nil && aiResponse != "" {
@@ -132,14 +164,15 @@ func handleBuy(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	response += fmt.Sprintf("**Purchase Recorded!**\n• Item: %s (x%d)\n• Total: %d gp\n• Character: %s\n\n*Remember to deduct gold from your character sheet!*",
 		item.Name, quantity, totalCost, char.Name)
 
-	respondWithMessage(s, i, response)
+	slog.Info("purchase recorded", "item", item.Name, "quantity", quantity, "character", char.Name)
+	editDeferredResponse(s, i, response)
 }
 
 // handleInventory processes the /inventory command
 func handleInventory(s *discordgo.Session, i *discordgo.InteractionCreate) {
-	slog.Info("inventory command received", "user", i.Member.User.Username)
+	slog.Info("inventory command received", "user", getUsername(i))
 
-	charFile, err := shop.GetCharacterForUser(i.Member.User.Username)
+	charFile, err := shop.GetCharacterForUser(getUsername(i))
 	if err != nil {
 		respondWithError(s, i, "You don't have a character registered. Contact the GM.")
 		return
@@ -168,9 +201,9 @@ func handleInventory(s *discordgo.Session, i *discordgo.InteractionCreate) {
 
 // handleHistory processes the /history command
 func handleHistory(s *discordgo.Session, i *discordgo.InteractionCreate) {
-	slog.Info("history command received", "user", i.Member.User.Username)
+	slog.Info("history command received", "user", getUsername(i))
 
-	charFile, err := shop.GetCharacterForUser(i.Member.User.Username)
+	charFile, err := shop.GetCharacterForUser(getUsername(i))
 	if err != nil {
 		respondWithError(s, i, "You don't have a character registered. Contact the GM.")
 		return
@@ -202,7 +235,14 @@ func handleHistory(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	respondWithMessage(s, i, response)
 }
 
-// respondWithMessage sends an interaction response
+// deferResponse tells Discord we're working on it (gives us 15 min instead of 3 sec)
+func deferResponse(s *discordgo.Session, i *discordgo.InteractionCreate) error {
+	return s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+		Type: discordgo.InteractionResponseDeferredChannelMessageWithSource,
+	})
+}
+
+// respondWithMessage sends an interaction response (use for immediate responses)
 func respondWithMessage(s *discordgo.Session, i *discordgo.InteractionCreate, message string) {
 	// Discord has a 2000 character limit, truncate if needed
 	if len(message) > 1900 {
@@ -217,6 +257,21 @@ func respondWithMessage(s *discordgo.Session, i *discordgo.InteractionCreate, me
 	})
 	if err != nil {
 		slog.Error("failed to respond to interaction", "error", err)
+	}
+}
+
+// editDeferredResponse edits a deferred response with the actual content
+func editDeferredResponse(s *discordgo.Session, i *discordgo.InteractionCreate, message string) {
+	// Discord has a 2000 character limit, truncate if needed
+	if len(message) > 1900 {
+		message = message[:1900] + "\n\n*...response truncated*"
+	}
+
+	_, err := s.InteractionResponseEdit(i.Interaction, &discordgo.WebhookEdit{
+		Content: &message,
+	})
+	if err != nil {
+		slog.Error("failed to edit deferred response", "error", err)
 	}
 }
 
