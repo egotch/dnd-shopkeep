@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "name": "Longsword",
+      "category": "weapons",
+      "price": 15,
+      "description": "Versatile martial weapon, 1d8 slashing",
+      "rarity": "common"
+    },
+    {
+      "name": "Shortsword",
+      "category": "weapons",
+      "price": 10,
+      "description": "Finesse, light martial weapon, 1d6 piercing",
+      "rarity": "common"
+    },
+    {
+      "name": "Longbow",
+      "category": "weapons",
+      "price": 50,
+      "description": "Two-handed ranged weapon, 1d8 piercing",
+      "rarity": "common"
+    },
+    {
+      "name": "Crossbow, Heavy",
+      "category": "weapons",
+      "price": 50,
+      "description": "Heavy, two-handed, 1d10 piercing",
+      "rarity": "common"
+    },
+    {
+      "name": "Dagger",
+      "category": "weapons",
+      "price": 2,
+      "description": "Finesse, light, thrown, 1d4 piercing",
+      "rarity": "common"
+    },
+    {
+      "name": "Rapier",
+      "category": "weapons",
+      "price": 25,
+      "description": "Finesse martial weapon, 1d8 piercing",
+      "rarity": "common"
+    },
+    {
+      "name": "Battleaxe",
+      "category": "weapons",
+      "price": 10,
+      "description": "Versatile martial weapon, 1d8 slashing",
+      "rarity": "common"
+    },
+    {
+      "name": "+1 Longsword",
+      "category": "weapons",
+      "price": 500,
+      "description": "+1 to attack and damage rolls",
+      "rarity": "uncommon"
+    }
+  ]
+}

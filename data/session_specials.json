@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "name": "Rope of Climbing",
+      "category": "wondrous",
+      "cost": 200,
+      "description": "60 ft rope that obeys commands",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Bag of Tricks (Gray)",
+      "category": "wondrous",
+      "cost": 250,
+      "description": "Pull out fuzzy objects that become creatures",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Cloak of Protection",
+      "category": "wondrous",
+      "cost": 500,
+      "description": "+1 to AC and saving throws",
+      "rarity": "uncommon"
+    }
+  ]
+}

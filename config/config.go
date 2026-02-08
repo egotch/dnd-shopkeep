@@ -2,21 +2,21 @@ package config
 
 // DataPaths contains paths to data directories
 var DataPaths = struct {
-	Catalog    string
-	Characters string
-	History    string
+	Weapons         string
+	Armor           string
+	Potions         string
+	AdventuringGear string
+	SessionSpecials string
+	Characters      string
+	History         string
 }{
-	Catalog:    "data/catalog.json",
-	Characters: "data/characters",
-	History:    "data/history",
-}
-
-// UserCharacterMap maps Discord usernames to character file names (without .json)
-// This is the central mapping used by the shop package
-var UserCharacterMap = map[string]string{
-	"timmehhey": "tim_paladin",
-	"egotch":    "eric_wizard",
-	"dhrudolp":  "dieter_rogue",
+	Weapons:         "data/weapons.json",
+	Armor:           "data/armor.json",
+	Potions:         "data/potions.json",
+	AdventuringGear: "data/adventuring_gear.json",
+	SessionSpecials: "data/session_specials.json",
+	Characters:      "data/characters",
+	History:         "data/history",
 }
 
 // ShopkeeperName is the name of the quartermaster NPC

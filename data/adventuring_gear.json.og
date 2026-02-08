@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "name": "Backpack",
+      "category": "gear",
+      "price": 2,
+      "description": "Holds 30 pounds of gear",
+      "rarity": "common"
+    },
+    {
+      "name": "Rope, Hempen (50 ft)",
+      "category": "gear",
+      "price": 1,
+      "description": "Standard hemp rope",
+      "rarity": "common"
+    },
+    {
+      "name": "Torch (10)",
+      "category": "gear",
+      "price": 1,
+      "description": "Pack of 10 torches, 1 hour each",
+      "rarity": "common"
+    },
+    {
+      "name": "Rations (1 day)",
+      "category": "gear",
+      "price": 1,
+      "description": "One day of trail rations",
+      "rarity": "common"
+    },
+    {
+      "name": "Thieves' Tools",
+      "category": "gear",
+      "price": 25,
+      "description": "Required for lockpicking and trap disarming",
+      "rarity": "common"
+    },
+    {
+      "name": "Spellbook",
+      "category": "gear",
+      "price": 50,
+      "description": "Essential for wizards, 100 pages",
+      "rarity": "common"
+    },
+    {
+      "name": "Holy Symbol",
+      "category": "gear",
+      "price": 5,
+      "description": "Divine focus for clerics and paladins",
+      "rarity": "common"
+    },
+    {
+      "name": "Component Pouch",
+      "category": "gear",
+      "price": 25,
+      "description": "Contains material components for spells",
+      "rarity": "common"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "name": "Elixir of Health",
+      "rarity": "Rare",
+      "description": "When you drink this potion, you are cured of all magical contagions. In addition, the following conditions end on you: Blinded, Deafened, Paralyzed, and Poisoned. The clear, red liquid has tiny bubbles of light in it."
+    },
+    {
+      "name": "Oil of Etherealness",
+      "rarity": "Rare",
+      "description": "One vial of this oil can cover one Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the Etherealness spell for 1..."
+    },
+    {
+      "name": "Oil of Sharpness",
+      "rarity": "Very Rare",
+      "description": "One vial of this oil can coat one Melee weapon or twenty pieces of ammunition, but only ammunition and Melee weapons that are nonmagical and deal Slashing or Piercing damage are affected. Applying the oil takes 1 minute, after which the oil magically seeps into whatever it coats, turning the coat..."
+    },
+    {
+      "name": "Oil of Slipperiness",
+      "rarity": "Uncommon",
+      "description": "One vial of this oil can cover one Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the Freedom of Movement spel..."
+    },
+    {
+      "name": "Philter of Love",
+      "rarity": "Uncommon",
+      "description": "The next time you see a creature within 10 minutes after drinking this philter, you are charmed by that creature and have the Charmed condition for 1 hour. This rose-hued, effervescent liquid contains one easy-to-miss bubble shaped like a heart."
+    },
+    {
+      "name": "Potion of Animal Friendship",
+      "rarity": "Uncommon",
+      "description": "When you drink this potion, you can cast the level 3 version of the Animal Friendship spell (save DC 13). Agitating this potion’s muddy liquid brings little bits into view: a fish scale, a hummingbird feather, a cat claw, or a squirrel hair."
+    },
+    {
+      "name": "Potion of Clairvoyance",
+      "rarity": "Rare",
+      "description": "When you drink this potion, you gain the effect of the Clairvoyance spell (no Concentration required). An eyeball bobs in this potion’s yellowish liquid but vanishes when the potion is opened."
+    },
+    {
+      "name": "Potion of Climbing",
+      "rarity": "Common",
+      "description": "When you drink this potion, you gain a Climb Speed equal to your Speed for 1 hour. During this time, you have Advantage on Strength (Athletics) checks to climb. This potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors."
+    },
+    {
+      "name": "Potion of Comprehension",
+      "rarity": "Common",
+      "description": "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour. This potion’s liquid is a clear concoction with bits of salt and soot swirling in it. Potion of Climbing, Potion of"
+    },
+    {
+      "name": "Potion of Diminution",
+      "rarity": "Rare",
+      "description": "When you drink this potion, you gain the “reduce” effect of the Enlarge/Reduce spell for 1d4 hours (no Concentration required). The red in the potion’s liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt th..."
+    },
+    {
+      "name": "Potion of Fire Breath",
+      "rarity": "Uncommon",
+      "description": "After drinking this potion, you can take a Bonus Action to exhale fire at a target within 30 feet of yourself. The target makes a DC 13 Dexterity saving throw, taking 4d6 Fire damage on a failed save or half as much damage on a successful one. The effect ends after you exhale the fire three times..."
+    },
+    {
+      "name": "Potion of Flying",
+      "rarity": "Very Rare",
+      "description": "When you drink this potion, you gain a Fly Speed equal to your Speed for 1 hour and can hover. If you’re in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion’s clear liquid floats at the top of its container and has cloudy white impurit..."
+    },
+    {
+      "name": "Potion of Gaseous Form",
+      "rarity": "Rare",
+      "description": "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no Concentration required) or until you end the effect as a Bonus Action. This potion’s container seems to hold fog that moves and pours like water."
+    },
+    {
+      "name": "Potion of Giant Strength",
+      "rarity": "Rarity Varies",
+      "description": "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score. This potion’s transparent liquid has floating in it a sliver of light resemb..."
+    },
+    {
+      "name": "Potion of Greater Invisibility",
+      "rarity": "Very Rare",
+      "description": "This potion’s container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour."
+    },
+    {
+      "name": "Potion of Growth",
+      "rarity": "Uncommon",
+      "description": "When you drink this potion, you gain the “enlarge” effect of the Enlarge/Reduce spell for 10 minutes (no Concentration required). The red in the potion’s liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrup..."
+    },
+    {
+      "name": "Potions of Healing",
+      "rarity": "Rarity Varies",
+      "description": "You regain Hit Points when you drink this potion. The number of Hit Points depends on the potion’s rarity, as shown in the table below. Whatever its potency, the potion’s red liquid glimmers when agitated."
+    },
+    {
+      "name": "Potion of Heroism",
+      "rarity": "Rare",
+      "description": "When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required). This potion’s blue liquid bubbles and steams as if boiling."
+    },
+    {
+      "name": "Potion of Invisibility",
+      "rarity": "Rare",
+      "description": "This potion’s container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour. The effect ends early if you make an attack roll, deal damage, or cast a spell."
+    },
+    {
+      "name": "Potion of Invulnerability",
+      "rarity": "Rare",
+      "description": "For 1 minute after you drink this potion, you have Resistance to all damage. This potion’s syrupy liquid looks like liquefied iron."
+    },
+    {
+      "name": "Potion of Longevity",
+      "rarity": "Very Rare",
+      "description": "When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. Each time you subsequently drink a Potion of Longevity, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years. Suspended in this amber liquid is a tiny heart that, against al..."
+    },
+    {
+      "name": "Potion of Mind Reading",
+      "rarity": "Rare",
+      "description": "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes (no Concentration required). This potion’s dense, purple liquid has an ovoid cloud of pink floating in it. Potion of Giant Strength (Storm), Potion of Healing,"
+    },
+    {
+      "name": "Potion of Poison",
+      "rarity": "Uncommon",
+      "description": "This concoction looks, smells, and tastes like a Potion of Healing or another beneficial potion. However, it is actually poison masked by illusion magic. Identify reveals its true nature. If you drink this potion, you take 4d6 Poison damage and must succeed on a DC 13 Constitution saving throw or..."
+    },
+    {
+      "name": "Potion of Pugilism",
+      "rarity": "Uncommon",
+      "description": "After you drink this potion, each Unarmed Strike you make deals an extra 1d6 Force damage on a hit. This effect lasts 10 minutes. This potion is a thick green fluid that tastes like spinach."
+    },
+    {
+      "name": "Potion of Resistance",
+      "rarity": "Uncommon",
+      "description": "When you drink this potion, you have Resistance to one type of damage for 1 hour. The DM chooses the type or determines it randomly by rolling on the following table."
+    },
+    {
+      "name": "Potion of Speed",
+      "rarity": "Very Rare",
+      "description": "When you drink this potion, you gain the effect of the Haste spell for 1 minute (no Concentration required) without suffering the wave of lethargy that typically occurs when the effect ends. This potion’s yellow fluid is streaked with black and swirls on its own."
+    },
+    {
+      "name": "Potion of Vitality",
+      "rarity": "Very Rare",
+      "description": "When you drink this potion, it removes any Exhaustion levels you have and ends the Poisoned condition on you. For the next 24 hours, you regain the maximum number of Hit Points for any Hit Point Die you spend. This potion’s crimson liquid regularly pulses with dull light, calling to mind a hear..."
+    },
+    {
+      "name": "Potion of Water Breathing",
+      "rarity": "Uncommon",
+      "description": "You can breathe underwater for 24 hours after drinking this potion. This potion’s cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it."
+    }
+  ]
+}

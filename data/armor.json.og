@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "name": "+1 Shield",
+      "category": "armor",
+      "price": 500,
+      "description": "+1 to AC in addition to shield bonus",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Chain Mail",
+      "category": "armor",
+      "price": 75,
+      "description": "Heavy armor, AC 16, Stealth disadvantage",
+      "rarity": "common"
+    },
+    {
+      "name": "Plate Armor",
+      "category": "armor",
+      "price": 1500,
+      "description": "Heavy armor, AC 18, Stealth disadvantage",
+      "rarity": "common"
+    },
+    {
+      "name": "Studded Leather",
+      "category": "armor",
+      "price": 45,
+      "description": "Light armor, AC 12 + Dex modifier",
+      "rarity": "common"
+    },
+    {
+      "name": "Scale Mail",
+      "category": "armor",
+      "price": 50,
+      "description": "Medium armor, AC 14 + Dex (max 2)",
+      "rarity": "common"
+    },
+    {
+      "name": "Shield",
+      "category": "armor",
+      "price": 10,
+      "description": "+2 AC when wielded",
+      "rarity": "common"
+    }
+  ]
+}

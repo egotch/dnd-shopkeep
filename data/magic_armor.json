@@ -1,0 +1,173 @@
+{
+  "items": [
+    {
+      "name": "Adamantine Armor",
+      "type": "Any Medium or Heavy, Except Hide Armor",
+      "rarity": "Uncommon",
+      "description": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you’re wearing it, any Critical Hit against you becomes a normal hit."
+    },
+    {
+      "name": "Animated Shield",
+      "type": "Shield",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "While holding this Shield, you can take a Bonus Action to cause it to animate. The Shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The Shield remains animate for 1 minute, until you take a Bonus Action to end this effect, or u..."
+    },
+    {
+      "name": "Armor, +1, +2, or +3",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Rare (+1), Very Rare (+2), or Legendary (+3)",
+      "description": "You have a bonus to Armor Class while wearing this armor. The bonus is determined by its rarity."
+    },
+    {
+      "name": "Armor of Gleaming",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Common",
+      "description": "This armor never gets dirty."
+    },
+    {
+      "name": "Armor of Invulnerability",
+      "type": "Plate Armor",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "You have Resistance to Bludgeoning, Piercing, and Slashing damage while you wear this armor. Metal Shell. You can take a Magic action to give yourself Immunity to Bludgeoning, Piercing, and Slashing damage for 10 minutes or until you are no longer wearing the armor. Once this property is used, it..."
+    },
+    {
+      "name": "Armor of Resistance",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "You have Resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly by rolling on the following table. Armor of resistance (Leather Armor), Armor of invulnerability (Plate Armor)"
+    },
+    {
+      "name": "Armor of Vulnerability",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "While wearing this armor, you have Resistance to one of the following damage types: Bludgeoning, Piercing, or Slashing. The DM chooses the type or determines it randomly. Curse. This armor is cursed, a fact that is revealed only when the Identify spell is cast on the armor or you attune to it. At..."
+    },
+    {
+      "name": "Arrow-Catching Shield",
+      "type": "Shield",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +2 bonus to Armor Class against ranged attack rolls while you wield this Shield. This bonus is in addition to the Shield’s normal bonus to AC. Whenever an attacker makes a ranged attack roll against a target within 5 feet of you, you can take a Reaction to become the target of the at..."
+    },
+    {
+      "name": "Cast-Off Armor",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Common",
+      "description": "You can doff this armor as a Magic action."
+    },
+    {
+      "name": "Demon Armor",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "While wearing this armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed St..."
+    },
+    {
+      "name": "Dragon Scale Mail",
+      "type": "Scale Mail",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "Dragon Scale Mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them. Other times, hunters carefully preserve the hide of a dead dragon. In either case, Dragon Scale Mail is highly valued. While wearing this armor, you gain a +1 bonus to Arm..."
+    },
+    {
+      "name": "Dwarven Plate",
+      "type": "Half-Plate Armor or Plate Armor",
+      "rarity": "Very Rare",
+      "description": "While wearing this armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet."
+    },
+    {
+      "name": "Efreeti Chain",
+      "type": "Chain Mail or Chain Shirt",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "While wearing this armor, you gain a +3 bonus to Armor Class, you have Immunity to Fire damage, and you know Primordial. In addition, you can stand on and move across molten rock as if it were solid ground."
+    },
+    {
+      "name": "Elven Chain",
+      "type": "Chain Mail or Chain Shirt",
+      "rarity": "Rare",
+      "description": "You gain a +1 bonus to Armor Class while you wear this armor. You are considered trained with this armor even if you lack training with Medium or Heavy armor."
+    },
+    {
+      "name": "Enspelled Armor",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Rarity Varies",
+      "attunement": "Requires Attunement",
+      "description": "Bound into this armor is a spell of level 8 or lower. The spell is determined when the armor is created and must belong to the Abjuration or Illusion school of magic. The armor has 6 charges and regains 1d6 expended charges daily at dawn. While wearing the armor, you can expend 1 charge to cast i..."
+    },
+    {
+      "name": "Glamoured Studded Leather",
+      "type": "Studded Leather Armor",
+      "rarity": "Rare",
+      "description": "While wearing this armor, you gain a +1 bonus to Armor Class. You can also take a Bonus Action to cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like—including color, style, and accessories—but the armor retains its n..."
+    },
+    {
+      "name": "Mariner’s Armor",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Uncommon",
+      "description": "While wearing this armor, you have a Swim Speed equal to your Speed. In addition, if you start your turn underwater with 0 Hit Points, you immediately regain 1d4 Hit Points. The armor can’t heal anyone again until the next dawn. The armor is decorated with fish and shell motifs."
+    },
+    {
+      "name": "Mithral Armor",
+      "type": "Any Medium or Heavy, Except Hide Armor",
+      "rarity": "Uncommon",
+      "description": "Mithral is a light, flexible metal. Armor made of this substance can be worn under normal clothes. If the armor normally imposes Disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn’t."
+    },
+    {
+      "name": "Plate Armor of Etherealness",
+      "type": "Half Plate Armor or Plate Armor",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "While you’re wearing this armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next..."
+    },
+    {
+      "name": "Sentinel Shield",
+      "type": "Shield",
+      "rarity": "Uncommon",
+      "description": "While holding this Shield, you have Advantage on Initiative rolls and Wisdom (Perception) checks. The Shield is emblazoned with a symbol of an eye."
+    },
+    {
+      "name": "Shield, +1, +2, or +3",
+      "type": "Shield",
+      "rarity": "Uncommon (+1), Rare (+2), or Very Rare (+3)",
+      "description": "While holding this Shield, you have a bonus to Armor Class determined by the Shield’s rarity, in addition to the Shield’s normal bonus to AC."
+    },
+    {
+      "name": "Shield of Expression",
+      "type": "Shield",
+      "rarity": "Common",
+      "description": "The front of this Shield is shaped in the likeness of a face. While bearing the Shield, you can take a Bonus Action to alter the face’s expression."
+    },
+    {
+      "name": "Shield of Missile Attraction",
+      "type": "Shield",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "While holding this Shield, you have Resistance to damage from attacks made with Ranged weapons. Curse. This Shield is cursed. Attuning to it curses you until you are targeted by a Remove Curse spell or similar magic. Removing the Shield fails to end the curse on you. Whenever an attack with a Ran..."
+    },
+    {
+      "name": "Shield of the Cavalier",
+      "type": "Shield",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "While holding this Shield, you have a +2 bonus to Armor Class. This bonus is in addition to the Shield’s normal bonus to AC. The Shield has the following additional properties that you can use while holding it. Forceful Bash. When you take the Attack action, you can make one of the attack rolls..."
+    },
+    {
+      "name": "Smoldering Armor",
+      "type": "Any Light, Medium, or Heavy",
+      "rarity": "Common",
+      "description": "Wisps of harmless, odorless smoke rise from this armor while it is worn."
+    },
+    {
+      "name": "Spellguard Shield",
+      "type": "Shield",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "While holding this Shield, you have Advantage on saving throws against spells and other magical effects, and spell attack rolls have Disadvantage against you. Spell Scroll Scroll, Rarity Varies"
+    }
+  ]
+}

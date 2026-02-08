@@ -1,0 +1,394 @@
+{
+  "items": [
+    {
+      "name": "Acid",
+      "weight": "1 lb.",
+      "cost": 40
+    },
+    {
+      "name": "Alchemist's Fire",
+      "weight": "1 lb.",
+      "cost": 75
+    },
+    {
+      "name": "Antitoxin",
+      "weight": "—",
+      "cost": 75
+    },
+    {
+      "name": "Backpack",
+      "weight": "5 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Ball Bearings",
+      "weight": "2 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Barrel",
+      "weight": "70 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Basket",
+      "weight": "2 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Bedroll",
+      "weight": "7 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Bell",
+      "weight": "—",
+      "cost": 2
+    },
+    {
+      "name": "Blanket",
+      "weight": "3 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Block and Tackle",
+      "weight": "5 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Book",
+      "weight": "5 lb.",
+      "cost": 40
+    },
+    {
+      "name": "Bottle, Glass",
+      "weight": "2 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Bucket",
+      "weight": "2 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Burglar's Pack",
+      "weight": "42 lb.",
+      "cost": 25
+    },
+    {
+      "name": "Caltrops",
+      "weight": "2 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Candle",
+      "weight": "—",
+      "cost": 1
+    },
+    {
+      "name": "Case, Crossbow Bolt",
+      "weight": "1 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Case, Map or Scroll",
+      "weight": "1 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Chain",
+      "weight": "10 lb.",
+      "cost": 8
+    },
+    {
+      "name": "Chest",
+      "weight": "25 lb.",
+      "cost": 8
+    },
+    {
+      "name": "Climber's Kit",
+      "weight": "12 lb.",
+      "cost": 40
+    },
+    {
+      "name": "Clothes, Fine",
+      "weight": "6 lb.",
+      "cost": 25
+    },
+    {
+      "name": "Clothes, Traveler's",
+      "weight": "4 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Component Pouch",
+      "weight": "2 lb.",
+      "cost": 40
+    },
+    {
+      "name": "Costume",
+      "weight": "4 lb.",
+      "cost": 8
+    },
+    {
+      "name": "Crowbar",
+      "weight": "5 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Diplomat's Pack",
+      "weight": "39 lb.",
+      "cost": 60
+    },
+    {
+      "name": "Dungeoneer's Pack",
+      "weight": "55 lb.",
+      "cost": 20
+    },
+    {
+      "name": "Entertainer's Pack",
+      "weight": "58½ lb.",
+      "cost": 60
+    },
+    {
+      "name": "Explorer's Pack",
+      "weight": "55 lb.",
+      "cost": 15
+    },
+    {
+      "name": "Flask",
+      "weight": "1 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Grappling Hook",
+      "weight": "4 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Healer's Kit",
+      "weight": "3 lb.",
+      "cost": 8
+    },
+    {
+      "name": "Holy Water",
+      "weight": "1 lb.",
+      "cost": 40
+    },
+    {
+      "name": "Hunting Trap",
+      "weight": "25 lb.",
+      "cost": 8
+    },
+    {
+      "name": "Ink",
+      "weight": "—",
+      "cost": 15
+    },
+    {
+      "name": "Ink Pen",
+      "weight": "—",
+      "cost": 1
+    },
+    {
+      "name": "Jug",
+      "weight": "4 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Ladder",
+      "weight": "25 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Lamp",
+      "weight": "1 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Lantern, Bullseye",
+      "weight": "2 lb.",
+      "cost": 15
+    },
+    {
+      "name": "Lantern, Hooded",
+      "weight": "2 lb.",
+      "cost": 8
+    },
+    {
+      "name": "Lock",
+      "weight": "1 lb.",
+      "cost": 15
+    },
+    {
+      "name": "Magnifying Glass",
+      "weight": "—",
+      "cost": 150
+    },
+    {
+      "name": "Manacles",
+      "weight": "6 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Map",
+      "weight": "—",
+      "cost": 2
+    },
+    {
+      "name": "Mirror",
+      "weight": "1/2 lb.",
+      "cost": 8
+    },
+    {
+      "name": "Net",
+      "weight": "3 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Oil",
+      "weight": "1 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Paper",
+      "weight": "—",
+      "cost": 1
+    },
+    {
+      "name": "Parchment",
+      "weight": "—",
+      "cost": 1
+    },
+    {
+      "name": "Perfume",
+      "weight": "—",
+      "cost": 8
+    },
+    {
+      "name": "Poison, Basic",
+      "weight": "—",
+      "cost": 150
+    },
+    {
+      "name": "Pole",
+      "weight": "7 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Pot, Iron",
+      "weight": "10 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Potion of Healing",
+      "weight": "1/2 lb.",
+      "cost": 75
+    },
+    {
+      "name": "Pouch",
+      "weight": "1 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Priest's Pack",
+      "weight": "29 lb.",
+      "cost": 50
+    },
+    {
+      "name": "Quiver",
+      "weight": "1 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Ram, Portable",
+      "weight": "35 lb.",
+      "cost": 6
+    },
+    {
+      "name": "Rations",
+      "weight": "2 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Robe",
+      "weight": "4 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Rope",
+      "weight": "5 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Sack",
+      "weight": "1/2 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Scholar's Pack",
+      "weight": "22 lb.",
+      "cost": 60
+    },
+    {
+      "name": "Shovel",
+      "weight": "5 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Signal Whistle",
+      "weight": "—",
+      "cost": 1
+    },
+    {
+      "name": "Spell Scroll (Cantrip)",
+      "weight": "—",
+      "cost": 45
+    },
+    {
+      "name": "Spell Scroll (Level 1)",
+      "weight": "—",
+      "cost": 75
+    },
+    {
+      "name": "Spikes, Iron",
+      "weight": "5 lb.",
+      "cost": 2
+    },
+    {
+      "name": "Spyglass",
+      "weight": "1 lb.",
+      "cost": 1500
+    },
+    {
+      "name": "String",
+      "weight": "—",
+      "cost": 1
+    },
+    {
+      "name": "Tent",
+      "weight": "20 lb.",
+      "cost": 3
+    },
+    {
+      "name": "Tinderbox",
+      "weight": "1 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Torch",
+      "weight": "1 lb.",
+      "cost": 1
+    },
+    {
+      "name": "Vial",
+      "weight": "—",
+      "cost": 2
+    },
+    {
+      "name": "Waterskin",
+      "weight": "5 lb. (full)",
+      "cost": 1
+    }
+  ]
+}

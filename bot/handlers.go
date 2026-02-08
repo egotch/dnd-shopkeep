@@ -47,10 +47,9 @@ func handleShop(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	var items []shop.Item
 	var title string
 
-	if category == "monthly" {
-		month := shop.GetCurrentMonth()
-		items = shop.GetMonthlyRotation(month)
-		title = fmt.Sprintf("Monthly Specials (%s)", month)
+	if category == "specials" {
+		items = shop.GetSessionSpecials()
+		title = "Session Specials"
 	} else {
 		items = catalog.GetItemsByCategory(category)
 		if category == "all" {
@@ -140,7 +139,7 @@ func handleBuy(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	}
 
 	// Log purchase for each quantity
-	totalCost := item.Price * quantity
+	totalCost := int(item.Cost) * quantity
 	for j := 0; j < quantity; j++ {
 		if err := shop.AppendPurchase(charFile, *item, "Between sessions"); err != nil {
 			editDeferredResponse(s, i, "Error: Failed to record purchase: "+err.Error())

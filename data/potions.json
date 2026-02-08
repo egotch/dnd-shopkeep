@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "name": "Potion of Healing",
+      "rarity": "Common",
+      "description": "Regain 2d4+2 hit points when you drink this potion.",
+      "cost": 50
+    },
+    {
+      "name": "Potion of Healing (Greater)",
+      "rarity": "Uncommon",
+      "description": "Regain 4d4+4 hit points when you drink this potion.",
+      "cost": 150
+    },
+    {
+      "name": "Potion of Healing (Superior)",
+      "rarity": "Rare",
+      "description": "Regain 8d4+8 hit points when you drink this potion.",
+      "cost": 500
+    },
+    {
+      "name": "Potion of Healing (Supreme)",
+      "rarity": "Very Rare",
+      "description": "Regain 10d4+20 hit points when you drink this potion.",
+      "cost": 1500
+    },
+    {
+      "name": "Antitoxin",
+      "rarity": "Common",
+      "description": "Advantage on saving throws against poison for 1 hour.",
+      "cost": 75
+    },
+    {
+      "name": "Potion of Climbing",
+      "rarity": "Common",
+      "description": "Gain a climbing speed equal to your walking speed for 1 hour.",
+      "cost": 75
+    },
+    {
+      "name": "Potion of Water Breathing",
+      "rarity": "Uncommon",
+      "description": "Breathe underwater for 24 hours.",
+      "cost": 200
+    },
+    {
+      "name": "Oil of Slipperiness",
+      "rarity": "Uncommon",
+      "description": "Gain Freedom of Movement effect for 8 hours, or create Grease effect.",
+      "cost": 150
+    }
+  ]
+}

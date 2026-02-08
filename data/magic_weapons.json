@@ -1,0 +1,332 @@
+{
+  "items": [
+    {
+      "name": "Adamantine Weapon",
+      "type": "Any Ammunition or Melee Weapon",
+      "rarity": "Uncommon",
+      "description": "This weapon or piece of ammunition is made of adamantine, one of the hardest substances in existence. Whenever this weapon or piece of ammunition hits an object, the hit is a Critical Hit."
+    },
+    {
+      "name": "Ammunition, +1, +2, or +3",
+      "type": "Any Ammunition",
+      "rarity": "Uncommon (+1), Rare (+2), or Very Rare (+3)",
+      "description": "You have a bonus to attack rolls and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical. This ammunition is typically found or sold in quantities of ten or twenty pieces. Ten pi..."
+    },
+    {
+      "name": "Ammunition of Slaying",
+      "type": "Any Ammunition",
+      "rarity": "Very Rare",
+      "description": "This magic ammunition is meant to slay creatures of a particular type, which the DM chooses or determines randomly by rolling on the table below. If a creature of that type takes damage from the ammunition, the creature makes a DC 17 Constitution saving throw, taking an extra 6d10 Force damage on..."
+    },
+    {
+      "name": "Axe of the Dwarvish Lords",
+      "type": "Battleaxe",
+      "rarity": "Artifact",
+      "attunement": "Requires Attunement",
+      "description": "A young dwarf prince set out to forge a weapon that would be regarded as a symbol of unity among his people. Venturing deep under the mountains, deeper than any dwarf had ever delved, the prince came to the blazing heart of a great volcano. With the aid of Moradin, a god of creation, he first cra..."
+    },
+    {
+      "name": "Berserker Axe",
+      "type": "Battleaxe, Greataxe, or Halberd",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your Hit Point maximum increases by 1 for each level you have attained. Curse. This weapon is cursed, and becoming attuned to it extends the curse to you. As long a..."
+    },
+    {
+      "name": "Blackrazor",
+      "type": "Greatsword",
+      "rarity": "Artifact",
+      "attunement": "Requires Attunement",
+      "description": "Blackrazor Hidden in the dungeon of White Plume Mountain, Blackrazor shines like a piece of night sky filled with stars. Its black scabbard is decorated with pieces of cut obsidian. You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. If you hit an Undead with this we..."
+    },
+    {
+      "name": "Dagger of Venom",
+      "type": "Dagger",
+      "rarity": "Rare",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. You can take a Bonus Action to magically coat the blade with poison. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving th..."
+    },
+    {
+      "name": "Dancing Sword",
+      "type": "Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "You can take a Bonus Action to toss this magic weapon into the air. When you do so, the weapon begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of itself. The weapon uses your attack roll and adds your ability modifier to damage rolls. While the weapon h..."
+    },
+    {
+      "name": "Defender",
+      "type": "Any Melee Weapon",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. The first time you attack with the weapon on each of your turns, you can transfer some or all of the weapon’s bonus to your Armor Class. For example, you could reduce the bonus to your attack rolls and damage roll..."
+    },
+    {
+      "name": "Dragon Slayer",
+      "type": "Any Simple or Martial",
+      "rarity": "Rare",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The weapon deals an extra 3d6 damage of the weapon’s type if the target is a Dragon."
+    },
+    {
+      "name": "Dwarven Thrower",
+      "type": "Warhammer",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement by a Dwarf or a Creature Attuned to a Belt of Dwarvenkind",
+      "description": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. It has the Thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 Force damage, or an extra 2d8 Force damage if the tar..."
+    },
+    {
+      "name": "Energy Bow",
+      "type": "Longbow or Shortbow",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Pierci..."
+    },
+    {
+      "name": "Enspelled Weapon",
+      "type": "Any Simple or Martial",
+      "rarity": "Rarity Varies",
+      "attunement": "Requires Attunement",
+      "description": "Bound into this weapon is a spell of level 8 or lower. The spell is determined when the weapon is created and must belong to the Conjuration, Divination, Evocation, Necromancy, or Transmutation school of magic. The weapon has 6 charges and regains 1d6 expended charges daily at dawn. While holding..."
+    },
+    {
+      "name": "Executioner’s Axe",
+      "type": "Battleaxe, Greataxe, Halberd, or Handaxe",
+      "rarity": "Very Rare",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. Any Humanoid you hit with the weapon takes an extra 2d6 Slashing damage, and you gain Temporary Hit Points equal to the extra damage dealt."
+    },
+    {
+      "name": "Flame Tongue",
+      "type": "Any Melee Weapon",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "While holding this magic weapon, you can take a Bonus Action and use a command word to cause flames to engulf the damage-dealing part of the weapon. These flames shed Bright Light in a 40-foot radius and Dim Light for an additional 40 feet. While the weapon is ablaze, it deals an extra 2d6 Fire d..."
+    },
+    {
+      "name": "Frost Brand",
+      "type": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "When you hit with an attack roll using this magic weapon, the target takes an extra 1d6 Cold damage. In addition, while you hold the weapon, you have Resistance to Fire damage. In freezing temperatures, the weapon sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet. Whe..."
+    },
+    {
+      "name": "Giant Slayer",
+      "type": "Any Simple or Martial",
+      "rarity": "Rare",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Giant with this weapon, the Giant takes an extra 2d6 damage of the weapon’s type and must succeed on a DC 15 Strength saving throw or have the Prone condition."
+    },
+    {
+      "name": "Hammer of Thunderbolts",
+      "type": "Maul or Warhammer",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The weapon has 5 charges. You can expend 1 charge and make a ranged attack with the weapon, hurling it as if it had the Thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits,..."
+    },
+    {
+      "name": "Holy Avenger",
+      "type": "Any Simple or Martial",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement by a Paladin",
+      "description": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Fiend or an Undead with it, that creature takes an extra 2d10 Radiant damage. While you hold the drawn weapon, it creates a 10-foot Emanation originating from you. You and all creatures Friendly to yo..."
+    },
+    {
+      "name": "Javelin of Lightning",
+      "type": "Javelin",
+      "rarity": "Uncommon",
+      "description": "Each time you make an attack roll with this magic weapon and hit, you can have it deal Lightning damage instead of Piercing damage. Lightning Bolt. When you throw this weapon at a target no farther than 120 feet from you, you can forgo making a ranged attack roll and instead turn the weapon into ..."
+    },
+    {
+      "name": "Luck Blade",
+      "type": "Glaive, Greatsword, Longsword, Rapier, Scimitar, Sickle, or Shortsword",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. While the weapon is on your person, you also gain a +1 bonus to saving throws. Luck. If the weapon is on your person, you can call on its luck (no action required) to reroll one failed D20 Test if you don’t have t..."
+    },
+    {
+      "name": "Lute of Thunderous Thumping",
+      "type": "Club",
+      "rarity": "Very Rare",
+      "description": "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit. Sing and Swing. If you’re a Bard, you can use your Charisma modifier instead of your Strength modifier when making a melee attack roll with the lute, provided you sing or hum while making the at..."
+    },
+    {
+      "name": "Mace of Disruption",
+      "type": "Mace",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "When you hit a Fiend or an Undead with this magic weapon, that creature takes an extra 2d6 Radiant damage. If the target has 25 Hit Points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature has the Frightened condi..."
+    },
+    {
+      "name": "Mace of Smiting",
+      "type": "Mace",
+      "rarity": "Rare",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The bonus increases to +3 when you use the weapon to attack a Construct. When you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 Bludgeoning damage, or 14 Bludgeoning damage if it’s..."
+    },
+    {
+      "name": "Mace of Terror",
+      "type": "Mace",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "This magic weapon has 3 charges and regains 1d3 expended charges daily at dawn. While holding the weapon, you can take a Magic action and expend 1 charge to release a wave of terror from it. Each creature of your choice within 30 feet of you must succeed on a DC 15 Wisdom saving throw or have the..."
+    },
+    {
+      "name": "Moonblade",
+      "type": "Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement by a Creature of the Weapon’s Choice",
+      "description": "Of all the magic items created by elves, one of the most prized and jealously guarded is a Moonblade. In ancient times, nearly all elven noble houses claimed one such weapon. Over the centuries, some of these weapons have faded from the world, their magic lost as family lines have become extinct...."
+    },
+    {
+      "name": "Moon-Touched Sword",
+      "type": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+      "rarity": "Common",
+      "description": "In Darkness, the unsheathed blade of this weapon sheds moonlight, creating Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. Moon-Touched Sword (Rapier)"
+    },
+    {
+      "name": "Nine Lives Stealer",
+      "type": "Any Simple or Martial",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon. Life Stealing. The weapon has 1d8 + 1 charges. When you attack a creature that has fewer than 100 Hit Points with this weapon and roll a 20 on the d20 for the attack roll, the creature must succeed on a DC 15 Consti..."
+    },
+    {
+      "name": "Oathbow",
+      "type": "Longbow or Shortbow",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "When you nock an arrow on this bow, it whispers in Elvish, “Swift defeat to my enemies.” When you use this weapon to make a ranged attack, you can utter or sign the following command words: “Swift death to you who have wronged me.” The target of your attack becomes your sworn enemy until ..."
+    },
+    {
+      "name": "Quarterstaff of the Acrobat",
+      "type": "Quarterstaff",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "You have a +2 bonus to attack rolls and damage rolls made with this magic weapon. While holding this weapon, you can cause it to emit green Dim Light out to 10 feet, either as a Bonus Action or after you roll Initiative, or you can extinguish the light as a Bonus Action. While holding this weapon..."
+    },
+    {
+      "name": "Scimitar of Speed",
+      "type": "Scimitar",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon. In addition, you can make one attack with it as a Bonus Action on each of your turns. Scroll of Protection Scroll, Rare"
+    },
+    {
+      "name": "Silvered Weapon",
+      "type": "Any Simple or Martial",
+      "rarity": "Common",
+      "description": "An alchemical process has bonded silver to this magic weapon. When you score a Critical Hit with it against a creature that is shape-shifted, the weapon deals one additional die of damage."
+    },
+    {
+      "name": "Sun Blade",
+      "type": "Longsword",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "This item appears to be a sword hilt. Blade of Radiance. While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the blade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If yo..."
+    },
+    {
+      "name": "Sword of Answering",
+      "type": "Longsword",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +3 bonus to attack rolls and damage rolls made with this sword. In addition, while you hold the sword, you can take a Reaction to make one melee attack with it against any creature in your reach that deals damage to you. You have Advantage on the attack roll, and any damage dealt with ..."
+    },
+    {
+      "name": "Sword of Kas",
+      "type": "Longsword",
+      "rarity": "Artifact",
+      "attunement": "Requires Attunement",
+      "description": "Kas was a powerful warrior who served Vecna and whose loyalty was rewarded with this sword. As Kas’s power grew, so did his hubris. The sword urged Kas to destroy Vecna and usurp his throne. Legend says Vecna’s destruction came at Kas’s hand, but Vecna also wrought his rebellious lieutenant..."
+    },
+    {
+      "name": "Sword of Life Stealing",
+      "type": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "When you attack a creature with this magic weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 15 Necrotic damage if it isn’t a Construct or an Undead, and you gain Temporary Hit Points equal to the amount of Necrotic damage taken."
+    },
+    {
+      "name": "Sword of Sharpness",
+      "type": "Glaive, Greatsword, Longsword, or Scimitar",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "When you attack an object with this magic weapon and hit, maximize your weapon damage dice against the target. When you attack a creature with this weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 14 Slashing damage and gains 1 Exhaustion level."
+    },
+    {
+      "name": "Sword of Vengeance",
+      "type": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+      "rarity": "Uncommon",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. Curse. This weapon is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the weapon, keeping it on your person at..."
+    },
+    {
+      "name": "Sword of Wounding",
+      "type": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+      "rarity": "Rare",
+      "attunement": "Requires Attunement",
+      "description": "When you hit a creature with an attack using this magic weapon, the target takes an extra 2d6 Necrotic damage and must succeed on a DC 15 Constitution saving throw or be unable to regain Hit Points for 1 hour. The target repeats the save at the end of each of its turns, ending the effect on itsel..."
+    },
+    {
+      "name": "Sylvan Talon",
+      "type": "Dagger, Rapier, Scimitar, Shortsword, Sickle, or Spear",
+      "rarity": "Common",
+      "attunement": "Requires Attunement",
+      "description": "While this weapon is on your person, you understand the nonwritten communication of all Fey, and they understand yours. Secret Message. As a Magic action, you can use the weapon to cast Message. Once this property is used, it can’t be used again until the next dawn."
+    },
+    {
+      "name": "Thunderous Greatclub",
+      "type": "Greatclub",
+      "rarity": "Very Rare",
+      "attunement": "Requires Attunement",
+      "description": "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried. The wea..."
+    },
+    {
+      "name": "Trident of Fish Command",
+      "type": "Trident",
+      "rarity": "Uncommon",
+      "attunement": "Requires Attunement",
+      "description": "This magic weapon has 3 charges, and it regains 1d3 expended charges daily at dawn. While you carry it, you can expend 1 charge to cast Dominate Beast (save DC 15) from it on a Beast that has a Swim Speed. Tome of Understanding, Tome of Leadership and Influence, Tome of Clear Thought"
+    },
+    {
+      "name": "Vicious Weapon",
+      "type": "Any Simple or Martial",
+      "rarity": "Rare",
+      "description": "This magic weapon deals an extra 2d6 damage to any creature it hits. This extra damage is of the same type as the weapon’s normal damage."
+    },
+    {
+      "name": "Vorpal Sword",
+      "type": "Glaive, Greatsword, Longsword, or Scimitar",
+      "rarity": "Legendary",
+      "attunement": "Requires Attunement",
+      "description": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. In addition, the weapon ignores Resistance to Slashing damage. When you use this weapon to attack a creature that has at least one head and roll a 20 on the d20 for the attack roll, you cut off one of the creature\ufffd\ufffd..."
+    },
+    {
+      "name": "Walloping Ammunition",
+      "type": "Any Ammunition",
+      "rarity": "Common",
+      "description": "A creature hit by this ammunition must succeed on a DC 10 Strength saving throw or have the Prone condition. Wand of Binding Wand, Rare (Requires Attunement)"
+    },
+    {
+      "name": "Wave",
+      "type": "Trident",
+      "rarity": "Artifact",
+      "attunement": "Requires Attunement",
+      "description": "Held in the dungeon of White Plume Mountain, Wave is engraved with images of waves, shells, and sea creatures. You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. When you roll a 20 on the d20 for an attack roll with this weapon, the target takes an extra 21 Necrotic..."
+    },
+    {
+      "name": "Weapon, +1, +2, or +3",
+      "type": "Any Simple or Martial",
+      "rarity": "Uncommon (+1), Rare (+2), or Very Rare (+3)",
+      "description": "You have a bonus to attack rolls and damage rolls made with this magic weapon. The bonus is determined by the weapon’s rarity."
+    },
+    {
+      "name": "Weapon of Warning",
+      "type": "Any Simple or Martial",
+      "rarity": "Uncommon",
+      "attunement": "Requires Attunement",
+      "description": "As long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits. Alarm. The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn’t wake a subject from magically induced slee..."
+    },
+    {
+      "name": "Whelm",
+      "type": "Warhammer",
+      "rarity": "Artifact",
+      "attunement": "Requires Attunement by a Dwarf or a Creature Attuned to a Belt of Dwarvenkind",
+      "description": "Whelm is a powerful weapon forged by dwarves and lost in the dungeon of White Plume Mountain. You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. Hurl. Whelm has the Thrown property with a normal range of 60 feet and a long range of 180 feet. When you hit with a rang..."
+    }
+  ]
+}

@@ -73,7 +73,7 @@ func AppendPurchase(characterFile string, item Item, session string) error {
 	purchase := Purchase{
 		Date:    time.Now().Format("2006-01-02"),
 		Item:    item.Name,
-		Price:   item.Price,
+		Price:   int(item.Cost),
 		Session: session,
 	}
 
