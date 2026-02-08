@@ -1,1 +1,7 @@
 .env
+data/characters/frank_the_frog.json
+data/characters/jack_hammer.json
+data/characters/magnus_ironwood.json
+data/dmguide_magic_items.csv
+data/phb_armor.csv
+data/phb_weapons.csv
