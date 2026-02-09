@@ -3,6 +3,8 @@ package shop
 import (
 	"fmt"
 	"math/rand/v2"
+	"regexp"
+	"strconv"
 	"strings"
 )
 
@@ -188,4 +190,53 @@ func formatGold(amount int) string {
 		return fmt.Sprintf("%d,000", amount/1000)
 	}
 	return fmt.Sprintf("%d", amount)
+}
+
+// rarityTiers maps D&D 5e level tiers to allowed rarities
+var rarityTiers = []struct {
+	MaxLevel  int
+	Rarities  []string
+}{
+	{4, []string{"Common", "Uncommon"}},
+	{10, []string{"Common", "Uncommon", "Rare"}},
+	{16, []string{"Common", "Uncommon", "Rare", "Very Rare"}},
+	{20, []string{"Common", "Uncommon", "Rare", "Very Rare", "Legendary"}},
+}
+
+// GetAllowedRarities returns the rarities available at a given character level
+func GetAllowedRarities(level int) []string {
+	for _, tier := range rarityTiers {
+		if level <= tier.MaxLevel {
+			return tier.Rarities
+		}
+	}
+	// Level 20+ gets everything
+	return rarityTiers[len(rarityTiers)-1].Rarities
+}
+
+// IsRarityAllowed checks if a rarity is available at a given character level
+func IsRarityAllowed(rarity string, level int) bool {
+	normalized := normalizeRarity(rarity)
+	for _, allowed := range GetAllowedRarities(level) {
+		if strings.EqualFold(normalized, allowed) {
+			return true
+		}
+	}
+	return false
+}
+
+// levelRegex matches a number in a class_level string like "Paladin 5"
+var levelRegex = regexp.MustCompile(`\d+`)
+
+// ParseLevel extracts the numeric level from a class_level string (e.g. "Paladin 5" -> 5)
+func ParseLevel(classLevel string) int {
+	match := levelRegex.FindString(classLevel)
+	if match == "" {
+		return 1
+	}
+	level, err := strconv.Atoi(match)
+	if err != nil {
+		return 1
+	}
+	return level
 }

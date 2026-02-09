@@ -1,25 +1,67 @@
 {
   "items": [
     {
-      "name": "Rope of Climbing",
-      "category": "wondrous",
-      "cost": 200,
-      "description": "60 ft rope that obeys commands",
-      "rarity": "uncommon"
-    },
-    {
-      "name": "Bag of Tricks (Gray)",
-      "category": "wondrous",
-      "cost": 250,
-      "description": "Pull out fuzzy objects that become creatures",
-      "rarity": "uncommon"
+      "name": "Shield of Missile Attraction",
+      "category": "specials",
+      "cost": 2800,
+      "description": "Recommended for Jack Hammer: A shield that can protect allies and attract projectiles to itself is perfect for Jack's playstyle. | While holding this Shield, you have Resistance to damage from attacks made with Ranged weapons. Curse. This Shield is cursed. Attuning to it curses you until you are targeted by a Remove Curse spell or similar magic. Removing the Shield fails to end the curse on you. Whenever an attack with a Ran...",
+      "rarity": "Rare, Requires Attunement"
     },
     {
       "name": "Cloak of Protection",
-      "category": "wondrous",
-      "cost": 500,
-      "description": "+1 to AC and saving throws",
-      "rarity": "uncommon"
+      "category": "specials",
+      "cost": 225,
+      "description": "Recommended for Jack Hammer: This cloak will provide additional protection to Jack in addition to his existing armor | You gain a +1 bonus to Armor Class and saving throws while you wear this cloak.",
+      "rarity": "Uncommon, Requires Attunement"
+    },
+    {
+      "name": "Adamantine Weapon",
+      "category": "specials",
+      "cost": 300,
+      "description": "Recommended for Jack Hammer: An adamantine weapon will increase the damage output of Jack's maul and warhammer. | This weapon or piece of ammunition is made of adamantine, one of the hardest substances in existence. Whenever this weapon or piece of ammunition hits an object, the hit is a Critical Hit.",
+      "rarity": "Uncommon"
+    },
+    {
+      "name": "Oil of Etherealness",
+      "category": "specials",
+      "cost": 1300,
+      "description": "Recommended for Magnus Ironwood: This oil will allow Magnus to become ethereal and move past attacks with ease. | One vial of this oil can cover one Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the Etherealness spell for 1...",
+      "rarity": "Rare"
+    },
+    {
+      "name": "Enspelled Armor",
+      "category": "specials",
+      "cost": 1800,
+      "description": "Recommended for Magnus Ironwood: This armor will provide additional defense against elemental attacks and give Magnus an edge in combat. | Bound into this armor is a spell of level 8 or lower. The spell is determined when the armor is created and must belong to the Abjuration or Illusion school of magic. The armor has 6 charges and regains 1d6 expended charges daily at dawn. While wearing the armor, you can expend 1 charge to cast i...",
+      "rarity": "Rare, Requires Attunement"
+    },
+    {
+      "name": "Potion of Fire Breath",
+      "category": "specials",
+      "cost": 275,
+      "description": "Recommended for Magnus Ironwood: A fire breath potion is perfect for Magnus's spellcasting style, allowing him to deal massive damage from a distance. | After drinking this potion, you can take a Bonus Action to exhale fire at a target within 30 feet of yourself. The target makes a DC 13 Dexterity saving throw, taking 4d6 Fire damage on a failed save or half as much damage on a successful one. The effect ends after you exhale the fire three times...",
+      "rarity": "Uncommon"
+    },
+    {
+      "name": "Instrument of the Bards",
+      "category": "specials",
+      "cost": 2000,
+      "description": "Recommended for Frank The Frog: This instrument will amplify Frank's bardic performances and provide additional charm effects. | An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creat...",
+      "rarity": "Rare, Requires Attunement by a Bard"
+    },
+    {
+      "name": "Cloak of Many Fashions",
+      "category": "specials",
+      "cost": 80,
+      "description": "Recommended for Frank The Frog: This cloak will provide Frank with additional utility and allow him to adapt to changing situations. | While wearing this cloak, you can take a Bonus Action to change the style, color, and apparent quality of the garment. The cloak’s weight doesn’t change. Regardless of its appearance, the cloak can’t be anything but a cloak. Although it can duplicate the appearance of other magic cloaks, it...",
+      "rarity": "Common"
+    },
+    {
+      "name": "Potion of Heroism",
+      "category": "specials",
+      "cost": 550,
+      "description": "Recommended for Frank The Frog: A potion of heroism is perfect for a support-focused character like Frank, giving his allies a boost in combat. | When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required). This potion’s blue liquid bubbles and steams as if boiling.",
+      "rarity": "Rare"
     }
   ]
 }

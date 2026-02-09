@@ -20,6 +20,7 @@ type OllamaRequest struct {
 	Model	string	`json:"model"`
 	Messages	[]ChatMessage	`json:"messages"`
 	Stream	bool	`json:"stream"`
+	Options	map[string]any	`json:"options,omitempty"`
 }
 
 type OllamaResponse struct {
@@ -107,6 +108,41 @@ func (c *Conversation) SendToOllama() (string, error) {
 	}
 
 	// IMPORTANT: Add the AI's rsponse to the converstion history
+	c.AddMessage("assistant", response.Message.Content)
+
+	return response.Message.Content, nil
+}
+
+// SendToOllamaWithTimeout sends the conversation with a configurable timeout and Ollama options
+func (c *Conversation) SendToOllamaWithTimeout(timeout time.Duration, options map[string]any) (string, error) {
+	request := OllamaRequest{
+		Model:    c.Model,
+		Messages: c.Messages,
+		Stream:   false,
+		Options:  options,
+	}
+
+	jsonData, err := json.Marshal(request)
+	if err != nil {
+		return "", err
+	}
+
+	client := &http.Client{Timeout: timeout}
+	resp, err := client.Post(
+		"http://localhost:11434/api/chat",
+		"application/json",
+		bytes.NewBuffer(jsonData),
+	)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	var response OllamaResponse
+	if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
+		return "", err
+	}
+
 	c.AddMessage("assistant", response.Message.Content)
 
 	return response.Message.Content, nil

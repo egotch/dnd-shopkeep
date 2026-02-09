@@ -16,6 +16,7 @@ type Character struct {
 	DiscordHandle    string   `json:"discord_handle"`
 	CurrentInventory []string `json:"current_inventory"`
 	BackstorySummary string   `json:"backstory_summary"`
+	Playstyle        string   `json:"playstyle"`
 }
 
 var charactersPath = "data/characters"
@@ -166,5 +167,9 @@ func (c *Character) FormatInventory() string {
 
 // FormatCharacterSummary returns a brief summary of the character for LLM context
 func (c *Character) FormatCharacterSummary() string {
-	return fmt.Sprintf("%s (%s): %s", c.Name, c.ClassLevel, c.BackstorySummary)
+	summary := fmt.Sprintf("%s (%s): %s", c.Name, c.ClassLevel, c.BackstorySummary)
+	if c.Playstyle != "" {
+		summary += fmt.Sprintf(" Playstyle: %s", c.Playstyle)
+	}
+	return summary
 }

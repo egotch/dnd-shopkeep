@@ -234,6 +234,33 @@ func handleHistory(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	respondWithMessage(s, i, response)
 }
 
+// handleRefresh processes the /refresh command (GM only)
+func handleRefresh(s *discordgo.Session, i *discordgo.InteractionCreate) {
+	username := getUsername(i)
+	slog.Info("refresh command received", "user", username)
+
+	// GM-only check
+	if username != "egotch" {
+		respondWithMessage(s, i, "Only the GM can refresh session specials.")
+		return
+	}
+
+	// Defer response — Ollama call is slow
+	if err := deferResponse(s, i); err != nil {
+		slog.Error("failed to defer response", "error", err)
+		return
+	}
+
+	items, err := shop.RefreshSessionSpecials()
+	if err != nil {
+		editDeferredResponse(s, i, "Error refreshing specials: "+err.Error())
+		return
+	}
+
+	response := fmt.Sprintf("**Session Specials Refreshed!** (%d items)\n\n%s", len(items), shop.FormatItemList(items))
+	editDeferredResponse(s, i, response)
+}
+
 // deferResponse tells Discord we're working on it (gives us 15 min instead of 3 sec)
 func deferResponse(s *discordgo.Session, i *discordgo.InteractionCreate) error {
 	return s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
@@ -259,19 +286,73 @@ func respondWithMessage(s *discordgo.Session, i *discordgo.InteractionCreate, me
 	}
 }
 
-// editDeferredResponse edits a deferred response with the actual content
+// editDeferredResponse edits a deferred response with the actual content.
+// If the message exceeds Discord's 2000 char limit, the first chunk goes into
+// the deferred edit and remaining chunks are sent as follow-up messages.
 func editDeferredResponse(s *discordgo.Session, i *discordgo.InteractionCreate, message string) {
-	// Discord has a 2000 character limit, truncate if needed
-	if len(message) > 1900 {
-		message = message[:1900] + "\n\n*...response truncated*"
-	}
+	chunks := splitMessage(message, 1900)
 
+	first := chunks[0]
 	_, err := s.InteractionResponseEdit(i.Interaction, &discordgo.WebhookEdit{
-		Content: &message,
+		Content: &first,
 	})
 	if err != nil {
 		slog.Error("failed to edit deferred response", "error", err)
+		return
 	}
+
+	// Send remaining chunks as follow-up messages
+	for _, chunk := range chunks[1:] {
+		_, err := s.FollowupMessageCreate(i.Interaction, true, &discordgo.WebhookParams{
+			Content: chunk,
+		})
+		if err != nil {
+			slog.Error("failed to send follow-up message", "error", err)
+			return
+		}
+	}
+}
+
+// splitMessage breaks a long message into chunks that fit within Discord's limit.
+// It splits on item boundaries (lines starting with "• ") so items stay whole.
+// Falls back to newline splitting if no item boundary is found.
+func splitMessage(message string, limit int) []string {
+	if len(message) <= limit {
+		return []string{message}
+	}
+
+	var chunks []string
+	for len(message) > 0 {
+		if len(message) <= limit {
+			chunks = append(chunks, message)
+			break
+		}
+
+		// Prefer splitting at an item boundary ("• ") within the limit
+		cut := -1
+		searchArea := message[:limit]
+		// Find the last "• " that starts a line (preceded by newline)
+		lastBullet := strings.LastIndex(searchArea, "\n• ")
+		if lastBullet > 0 {
+			cut = lastBullet
+		}
+
+		// Fall back to last newline
+		if cut <= 0 {
+			cut = strings.LastIndex(searchArea, "\n")
+		}
+
+		// Last resort: hard cut
+		if cut <= 0 {
+			cut = limit
+		}
+
+		chunks = append(chunks, strings.TrimRight(message[:cut], "\n"))
+		message = message[cut:]
+		message = strings.TrimPrefix(message, "\n")
+	}
+
+	return chunks
 }
 
 // respondWithError sends an error response

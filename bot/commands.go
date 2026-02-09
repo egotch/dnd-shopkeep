@@ -52,6 +52,10 @@ var Commands = []*discordgo.ApplicationCommand{
 		Name:        "history",
 		Description: "View your purchase history",
 	},
+	{
+		Name:        "refresh",
+		Description: "Refresh session specials with AI-curated items (GM only)",
+	},
 }
 
 // CommandHandlers maps command names to their handler functions
@@ -60,6 +64,7 @@ var CommandHandlers = map[string]func(s *discordgo.Session, i *discordgo.Interac
 	"buy":       handleBuy,
 	"inventory": handleInventory,
 	"history":   handleHistory,
+	"refresh":   handleRefresh,
 }
 
 // floatPtr is a helper to create a *float64 for MinValue
